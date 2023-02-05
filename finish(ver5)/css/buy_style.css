@@ -1,0 +1,368 @@
+@charset "UTF-8";
+* {
+  font-weight: normal;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  list-style: none;
+  color: #000;
+}
+
+img {
+  vertical-align: top;
+  width: 100px;
+}
+
+html {
+  font-size: 15px;
+}
+
+html body header {
+  display: flex;
+  padding: 0px 36px;
+  border-bottom: 0px;
+  border-bottom: 1px solid #4f4f4f;
+  /* 区切り線 */
+}
+
+html body header .header_title {
+  /*タイトル（アルペルト）*/
+  display: inline-flex;
+  align-items: center;
+}
+
+html body header #search {
+  /*検索*/
+  display: flex;
+}
+
+html body header #search .search-form {
+  /*フォーム全体*/
+  margin: 30px;
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  width: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFF;
+  font-size: 15px;
+}
+
+html body header #search .search-form .search-input {
+  /*入力フォーム*/
+  border: none;
+  background: none;
+  outline: none;
+  margin-right: 80px;
+  width: 430px;
+  color: #333;
+}
+
+html body header #search .search-form .search-button {
+  /*検索ボタン*/
+  border: none;
+  background: none;
+  outline: none;
+  color: #999;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  transition: color 0.3s ease 0s;
+}
+
+html body header #search .search-form .search-button:hover {
+  color: #333;
+}
+
+html body header #news {
+  /*通知*/
+  display: inline-flex;
+  align-items: center;
+  margin: auto 2% auto auto;
+}
+
+html body header #news span {
+  /*通知数*/
+  position: absolute;
+  /* 相対位置に指定 */
+  top: -10px;
+  /* 表示位置を上から-10pxの位置にする */
+  left: calc(100% - 10px);
+  /* 表示位置を右から内側に10pxの位置 */
+  color: #FFF;
+  /* 文字色を白に指定 */
+  font-weight: bold;
+  /* 太文字にする */
+  line-height: 20px;
+  /* 行の高さを指定 */
+  text-align: center;
+  /* 文字を中央揃えにする */
+  background: #E68031;
+  /* 背景色をオレンジに指定 */
+  border-radius: 10px;
+  /* line-heightの半分の角丸を指定 */
+  min-width: 20px;
+  /* 最低幅を指定 */
+  padding: 0 3px;
+  /* 左右に少しだけ余白を設定 */
+  box-sizing: border-box;
+  /* 計算しやすいように */
+}
+
+html body header #login_button {
+  /*ログイン・新規登録*/
+  display: inline-flex;
+  align-items: center;
+  margin: 30px 10px;
+  padding: 2px 5px;
+}
+
+html body header #login_button a {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #808080;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+html body header #login_button a:hover {
+  color: #808080;
+  background-color: #fff;
+  border: 1px solid #808080;
+}
+
+html body div#body {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+html body div#body div#product {
+  display: flex;
+  border: solid 1px #000;
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+html body div#body div#product div#img {
+  border-right: solid 1px #000;
+}
+
+html body div#body div#product div#img p {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+html body div#body div#product div#img p img {
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+html body div#body div#product div#info {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+html body div#body div#product div#info p {
+  font-size: 1.5rem;
+}
+
+html body div#body div#product div#info p#pName {
+  font-size: 1.75rem;
+}
+
+html body div#body div#product div#info p#price {
+  color: red;
+}
+
+html body div#body div#product div#info p#price span {
+  font-size: 0.75rem;
+}
+
+html body div#body div#main {
+  width: 600px;
+  margin: 0 auto;
+}
+
+html body div#body div#main form div.content1 {
+  margin-bottom: 30px;
+}
+
+html body div#body div#main form div.content1 div.content2 {
+  border: solid 1px #8e8e8e;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+html body div#body div#main form div.content1 div.content2 p.change {
+  text-decoration: solid #1bb51e;
+  color: #1bb51e;
+  text-align: end;
+}
+
+html body div#body div#main form div.content1 div.content2 div.content3 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+html body div#body div#main form div.content1 div.content2 div#total {
+  padding-top: 10px;
+  border-top: dotted 1px #8e8e8e;
+}
+
+html body div#body div#main form div.content1 div.content2 div#total p {
+  font-size: 1.4rem;
+}
+
+html body div#body div#main form div.content1 div.content2 div#total p.text {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+html body div#body div#main form div.content1 div.content2 div#total p.text span {
+  font-size: 1rem;
+  bottom: 3px;
+}
+
+html body div#body div#main form div.content1 div#address_info p {
+  display: flex;
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+html body div#body div#main form div.content1 div#address_info p span {
+  width: 100px;
+}
+
+html body div#body div#main form div.content1 div#address_info p input {
+  width: 350px;
+  border-bottom: solid 1px #000;
+  outline: none;
+  font-size: 1.1rem;
+}
+
+html body div#body div#main form div.content1 div#address_info .overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: grey;
+  opacity: .6;
+  display: none;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+html body div#body div#main form div.content1 div#address_info .modal {
+  position: fixed;
+  top: 50%;
+  display: none;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 150;
+}
+
+html body div#body div#main form div.content1 div#address_info .modal #modal_main {
+  padding: 50px;
+  font-size: 1.25rem;
+}
+
+html body div#body div#main form div.content1 div#address_info .modal #modal_main input {
+  outline: none;
+  font-size: 1.15rem;
+}
+
+html body div#body div#main form div.content1 div#address_info .modal #modal_main div#btn {
+  text-align: center;
+}
+
+html body div#body div#main form div.content1 div#address_info .modal #modal_main div#btn button {
+  padding: 5px 10px;
+  font-size: 1.25rem;
+  margin: 20px;
+  margin-bottom: 10px;
+  transition: 0.1s;
+  color: #FFF;
+  border-radius: 5px;
+}
+
+html body div#body div#main form div.content1 div#address_info .modal #modal_main div#btn #js-close {
+  background-color: #1bb51e;
+  border: solid 1px #1bb51e;
+}
+
+html body div#body div#main form div.content1 div#address_info .modal #modal_main div#btn #js-close:hover {
+  background-color: #FFF;
+  color: #1bb51e;
+}
+
+html body div#body div#main form div.content1 div#address_info .modal #modal_main div#btn #js-cancel {
+  background-color: red;
+  border: solid 1px red;
+}
+
+html body div#body div#main form div.content1 div#address_info .modal #modal_main div#btn #js-cancel:hover {
+  background-color: #FFF;
+  color: red;
+}
+
+html body div#body div#main form div.content1 div#address_info .open {
+  display: block;
+}
+
+html body div#body div#main form div.content1 div#address_info .modal-open {
+  background: #1bb51e;
+  border: solid 1px #1bb51e;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 0;
+  width: 150px;
+  margin: 10px auto;
+  margin-top: 20px;
+  transition: 0.1s;
+  display: block;
+}
+
+html body div#body div#main form div.content1 div#address_info .modal-open:hover {
+  background-color: #FFF;
+  color: #1bb51e;
+}
+
+html body div#body div#main form div.content1 div#card p {
+  font-size: 1.1rem;
+}
+
+html body div#body div#main form div.content1 div#card p.change {
+  font-size: 0.9rem;
+}
+
+html body div#body div#main form button#cash {
+  width: 400px;
+  background-color: #1bb51e;
+  border: solid 2px #1bb51e;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  margin: 60px auto;
+  transition: 0.1s;
+}
+
+html body div#body div#main form button#cash:hover {
+  border: solid 2px #1bb51e;
+  background-color: #fff;
+  color: #1bb51e;
+}
+/*# sourceMappingURL=buy_style.css.map */

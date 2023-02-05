@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* headerの設定 */
+#header {
+  /* h1の中央寄せ配置の起点とするためのrelative */
+  position: relative;
+  height: 100vh;
+  /* 高さを全画面に合わせる */
+  /* videoの設定 */
+}
+
+#header #video-area {
+  position: fixed;
+  z-index: -1;
+  /* 最背面に設定 */
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+#header #video-area #video {
+  /* 天地中央配置 */
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 縦横幅指定 */
+  /* 16:9の幅ー＞16÷９=177.77% */
+  width: 177.777778vh;
+  height: 56.25vw;
+  min-height: 100%;
+  min-width: 100%;
+  filter: brightness(50%);
+}
+
+main #logo {
+  position: absolute;
+  top: 20%;
+  left: 18%;
+  position: fixed;
+}
+
+main #form {
+  width: 35%;
+  position: absolute;
+  top: 20%;
+  right: 13%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+main #form h1 {
+  margin: 0 auto;
+  border-bottom: 1px solid black;
+  width: 150px;
+  padding-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+main #form .content1 {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #000;
+}
+
+main #form p {
+  margin-top: 10px;
+}
+
+main #form p:nth-last-of-type(1) a {
+  background-color: #1bb51e;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+main #form p:nth-last-of-type(1) a:hover {
+  background-color: white;
+  color: #1bb51e;
+  border: 1px solid #1bb51e;
+  transition: .3s;
+}
+/*# sourceMappingURL=conf.css.map */

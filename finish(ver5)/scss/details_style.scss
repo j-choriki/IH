@@ -1,0 +1,311 @@
+$text-color:rgb(27, 181, 30);
+/*-------------------------
+全般的なスタイル
+-------------------------*/
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    box-sizing: border-box;
+    
+    *{
+        box-sizing: inherit; /*bodyに書いておくだけだと全体適用にならないので、body*で子要素に引き継ぎ */
+    }
+}
+*{
+    margin: 0; 
+    padding: 0;
+    // max-width: 100%;
+    height: auto;
+    position: relative;
+    a{
+        text-decoration:none;
+        color: rgb(0, 0, 0);
+    }
+    
+}
+
+/*-------------------------
+  メイン
+-------------------------*/
+main{
+    #box2{
+        display: flex;
+        .container {
+            margin: 80px 11% 0;
+            max-width: 500px;
+            
+            .slider1{
+                margin-bottom: 20px;
+                .slick-slide img {
+                    // width: auto; /* 変更 */
+                    height: 100%; /* 変更 */
+                    max-width: 500px;
+                }
+                .slick-track{ /* 追加 */
+                    height: 50vh;
+                }
+                .slick-prev,.slick-next{
+                    width: 20px;
+                    height: 20px;
+                }
+                .slick-prev:before, .slick-next:before {
+                    color: #000;/*黒にする*/
+                    opacity: 1;/*デフォルトは.75が指定されている*/
+                    font-size: 25px;
+                }
+                img{
+                    box-sizing: border-box;
+                    align-items: center;
+                }
+            }
+            .thumbnail{
+                .slick-prev,.slick-next{
+                    width: 25px;
+                    height: 25px;
+                }
+                .slick-prev:before, .slick-next:before {
+                    color: #000;/*黒にする*/
+                    opacity: 1;/*デフォルトは.75が指定されている*/
+                    font-size: 25px;
+                }
+                .slick-prev:before{
+                    content: "\f053";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    -moz-osx-font-smoothing: grayscale;
+                    -webkit-font-smoothing: antialiased;
+                    display: inline-block;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    font-weight: 700;
+                }
+                .slick-next:before{
+                    content: "\f054";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    -moz-osx-font-smoothing: grayscale;
+                    -webkit-font-smoothing: antialiased;
+                    display: inline-block;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    font-weight: 700;
+                }
+            }
+            img {
+                height: auto;
+                width: 100%;
+                padding-left: 5px;
+                margin: 0 auto;
+            }
+            .thumbnail-img {
+                opacity: .3;
+                transition: opacity .3s linear;
+            }
+            .thumbnail .slick-current {
+                opacity: 1;
+            }
+        }
+
+
+
+        #right_box{
+            margin-top: 80px;
+            h1{
+                width:500px; 
+                height:100px;
+                word-wrap: normal;/*自動改行*/
+            }
+            .money{
+                .money_red{
+                    color: red;
+                    font-size: 20px;
+                    font-weight: 550;
+                }
+                span{
+                    color: #808080;
+                    font-size: 10px;
+                    padding-left: 10px;
+                }
+            }
+            
+            .example2{
+                display: flex;
+            }
+            .example2 label{
+            margin-top: 30px;
+            margin-left: 20px;
+            }
+            .example2 label:before,
+            .example2 label:after {
+              position: absolute;
+              content: "";
+              left: 25px;
+              top: 0;
+              width: 25px;
+              height: 40px;
+              background: #ff5db6;
+              border-radius: 50px 50px 0 0;
+              transform: rotate(-45deg);
+              transform-origin: 0 100%;
+            }
+            .example2 label:after {
+              left: 0;
+              transform: rotate(45deg);
+              transform-origin :100% 100%;
+            }
+            .example2 input:checked+label:before,
+            .example2 input:checked+label:after {
+                background: #8a8a8a;
+                color: #FFF;
+            }
+            .example2 input{
+                display: none;
+            }
+
+            #comment{
+                margin-top: -30px;
+                margin-left: 80px;
+                img{
+                    width: 100px;
+                    height: 100px;
+                }
+                
+            }
+
+            .block2{ /*「確認する」ボタン*/
+                a{
+                    margin: 20px 2% auto auto;
+                    color: #ffffff;
+                    background-color: $text-color;
+                    border-radius: 10px;
+                    padding: 15px 200px;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    border:1px solid #000000;
+                    &:hover{
+                        background-color:white;
+                        color: $text-color;
+                        transition:.3s;
+                        border: 1px solid $text-color;
+                    }
+                }
+            }
+
+            .explanation{
+                margin-top: 30px;
+                h3{
+                    margin-bottom: 10px;
+                }
+                p{
+                    width:500px; 
+                    word-wrap: normal;/*自動改行*/
+                }
+            }
+            #buyer{
+                margin-top : 20px;
+                border-bottom :1px solid rgba(0, 0, 0, 0.313);
+                h3{
+                    border-bottom :1px solid rgba(0, 0, 0, 0.313);
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                }
+                .flex{
+                    display:flex;
+                    #radius{
+                        border-radius: 150px;
+                        overflow: hidden;
+                    }
+                    div{
+                        margin-left:30px;
+                    }
+                }
+            }
+        }
+    }
+    
+    #box3{
+        margin: 80px  11%;
+        #show_question{
+            border: 1px solid #000;
+            height: 300px;
+            overflow:scroll;
+            p{
+                padding-bottom: 10px;
+            }
+        }
+        #question{
+            margin-top: 20px;
+            .tarea{ /*商品の説明入力フォーム*/
+                display: inline-block;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid rgb(0, 0, 0);
+                box-sizing: border-box;
+                margin: 0em 0;
+                line-height: 1.5;
+                height: 5em;
+            }
+            .button3{
+                display: inline-block;
+                margin: 0 10px;
+                padding: 6px 25px;
+                color: #ffffff;
+                font-weight: bold;
+                letter-spacing: 0.5pt;
+                text-decoration: none;
+                background-color: $text-color;
+                border: 1px solid $text-color;
+                cursor: pointer;
+                transition-duration:0.3s;
+                -webkit-transition-duration:0.3s;
+                -moz-transition-duration:0.3s;
+                -o-transition-duration:0.3s;
+                -ms-transition-duration:0.3s;
+                position: relative;
+                display: block;
+                position: absolute;
+                right: 0;
+ 
+            }
+            .button3:hover{
+                color: $text-color;
+                background-color: #ffffff;
+            }
+        }
+    }
+
+    
+    #other_item{
+        width: 80%;
+        margin: 0 auto;
+        #contents{
+            display: flex;
+            flex-wrap: wrap;
+            .item{
+              width: calc(20% - 30px);
+              margin: 15px;
+              position: relative;
+              p{
+                font-size: 1.1rem;
+              }
+              .price{
+                position: absolute;
+                bottom: 20%;
+                font-size: 1.2rem;
+                background-color:#000000ad;
+                color: white;
+                width: 100px;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+              }
+            }
+        } 
+    }
+
+
+}

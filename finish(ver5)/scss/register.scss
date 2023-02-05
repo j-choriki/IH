@@ -1,0 +1,151 @@
+body {
+	// width: 100vw;
+	// height: 100vh;
+	// background-image: url(../img/login_bg.jpg);
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	// background-position: 50%;
+
+	/* headerの設定 */
+#header{
+	/* h1の中央寄せ配置の起点とするためのrelative */
+	position: relative;
+	height: 100vh;/* 高さを全画面に合わせる */
+  
+	/* videoの設定 */
+	#video-area{
+	  position: fixed;
+	  z-index: -1;/* 最背面に設定 */
+	  top: 0;
+	  right: 0;
+	  left: 0;
+	  bottom: 0;
+	  overflow: hidden;
+	  
+	  #video{
+		/* 天地中央配置 */
+		position: absolute;
+		z-index: -1;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		/* 縦横幅指定 */
+		/* 16:9の幅ー＞16÷９=177.77% */
+		width: 177.777778vh;
+		height: 56.25vw;
+		min-height: 100%;
+		min-width: 100%;
+		filter: brightness(50%);
+	  }
+	}
+  
+  }
+
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	.hide {
+		display: none;
+	}
+
+	header {
+		width: 500px;
+
+      h1 {
+        font-size: 4rem;
+        color: #fff;
+        font-weight: bold;
+      }
+	}
+
+	main {
+		position: absolute;
+		top: 10%;
+		right: 15%;
+		display: flex;
+		align-items: center;
+		#logo{
+			margin-right: 100px;
+		}
+
+		#form {
+			background-color: #f7f6f5;
+			border-radius: 15px;
+
+			width: 500px;
+			padding: 50px;
+
+			h2 {
+				font-size: 2rem;
+				font-weight: bold;
+				margin-bottom: 40px;
+			}
+
+			form {
+				.form {
+					div {
+						position: relative;
+						margin-bottom: 25px;
+
+						label {
+							display: block;
+							padding-bottom: 10px;
+							font-size: 0.9rem;
+
+							&.err {
+								color: #ff0000;
+							}
+						}
+						
+						input {
+							border-bottom: solid 1px #000;
+							margin-bottom: 5px;
+							width: 100%;
+							padding-bottom: 0.4rem;
+							outline: none;
+						}
+						
+						select {
+							outline: none;
+							border: 1px solid rgb(103, 103, 103);
+							-webkit-appearance: menulist;
+  						appearance: menulist;
+							padding: 3px;
+							border-radius: 5px;
+						}
+						
+						span:not(.eye) {
+							color: #ff0000;
+							font-size: 0.8rem;
+						}
+
+						span.eye {
+							position: absolute;
+							top: 20px;
+							right: 5px;
+							margin-bottom: 4px;
+							cursor: pointer;
+	
+							ion-icon {
+								font-size: 25px;
+							}
+
+							img {
+								width: 40px;
+							}
+						}
+					}
+				}
+
+				button {
+					background-color: greenyellow;
+					padding: 10px;
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+
+}

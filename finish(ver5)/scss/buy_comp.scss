@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+
+*{
+  font-weight: normal;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  list-style: none;
+  outline: none;
+  color: #000;
+}//*
+
+img{
+  vertical-align: top;
+  width: 100px;
+}//img
+
+//-----------------------------------------------------------------------------------------------------------------
+
+html{
+  font-size: 15px;
+  body{
+
+//ここからヘッダー----------------------------------------------------------------------------------------------------
+
+    header{
+      display: flex;
+      padding: 0px 36px;
+      border-bottom: 0px;
+      border-bottom: 1px solid rgb(79, 79, 79); /* 区切り線 */
+
+      .header_title { /*タイトル（アルペルト）*/
+        display: inline-flex;
+        align-items: center;
+      } //.header_title
+
+      #search { /*検索*/
+        display: flex;
+        .search-form { /*フォーム全体*/
+          margin: 30px;
+          padding: 5px 10px;
+          border: 1px solid #333;
+          border-radius: 10px;
+          width: 430px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #FFF;
+          font-size: 15px;
+
+          .search-input { /*入力フォーム*/
+            border: none;
+            background: none;
+            outline: none;
+            margin-right: 80px;
+            width: 430px;
+            color: #333;
+          } //.search-input
+
+          .search-button { /*検索ボタン*/
+            border: none;
+            background: none;
+            outline: none;
+            color: #999;
+            font-weight: 900;
+            font-family: "Font Awesome 5 Free";
+            transition: color 0.3s ease 0s;
+          } //.search-button
+
+          .search-button:hover {
+            color: #333;
+          } //.search-button:hover
+        } //.search-form
+      } //#search
+      #news { /*通知*/
+        display: inline-flex;
+        align-items: center;
+        margin: auto 2% auto auto;
+        span { /*通知数*/
+          position: absolute; /* 相対位置に指定 */
+          top: -10px; /* 表示位置を上から-10pxの位置にする */
+          left: calc(100% - 10px); /* 表示位置を右から内側に10pxの位置 */
+          color: #FFF; /* 文字色を白に指定 */
+          font-weight: bold; /* 太文字にする */
+          line-height: 20px; /* 行の高さを指定 */
+          text-align: center; /* 文字を中央揃えにする */
+          background: #E68031; /* 背景色をオレンジに指定 */
+          border-radius: 10px; /* line-heightの半分の角丸を指定 */
+          min-width: 20px; /* 最低幅を指定 */
+          padding: 0 3px; /* 左右に少しだけ余白を設定 */
+          box-sizing: border-box; /* 計算しやすいように */
+        } //sapn
+      } //#news
+      #login_button { /*ログイン・新規登録*/
+        display: inline-flex;
+        align-items: center;
+        margin: 30px 10px;
+        padding: 2px 5px;
+        a{
+          color: #000;
+          background-color: #fff;
+          border: 1px solid #808080;
+          border-radius: 10px;
+          padding: 5px 10px;
+        } //a
+
+        a:hover {
+          color: #808080;
+          background-color: #fff;
+          border: 1px solid #808080;
+        } //a:hover
+      } //#login_button
+    } //header
+
+//ここからメイン----------------------------------------------------------------------------------------------------
+
+    div#body{
+      font-size: 1.5rem;
+      width: 750px;
+      margin: 0 auto;
+      div#complete{
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 40px 0;
+        h1{
+          padding: 0 10px;
+          border-bottom: solid 5px rgb(27,181,30);
+          margin-bottom: 10px;
+        }//h1
+      }//div#complete
+
+      div#confirm{
+        border: solid 1px #000;
+        width: 700px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        padding: 20px 0;
+      }//div#confirm
+      div.content1{
+        div.content2{
+          width: 600px;
+          margin: 0 auto;
+          margin-bottom: 30px;
+          h2{
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+          }
+          div#address_info{
+            p{
+              width: 550px;
+              border-bottom: solid 1px rgb(27,181,30);
+              margin-bottom: 10px;
+              position: relative;
+              left: 20px;
+              display: flex;
+              span{
+                width: 150px;
+              }//span
+            }//p
+          }//div#address_info
+        }//div.content2
+
+        div#product{
+          display: flex;
+          border: solid 1px #000;
+          div#img{
+            border-right: solid 1px #000;
+            p{
+              width: 100px;
+              height: 100px;
+              overflow: hidden;
+              img{
+                width: 100%;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                height: auto;
+              }//img
+            }//p
+          }//div#img
+
+          div#info{
+            margin-top: 15px;
+            margin-left: 10px;
+            p{
+              font-size: 1.5rem;
+            }//p
+            p#pName{
+              font-size: 1.75rem;
+            }//p#pName
+            p#price{
+              color: rgb(255, 0, 0);
+              span{
+                font-size: 0.75rem;
+              }//span
+            }//p#price
+          }//div#info
+        }//div#product
+
+        div#total{
+          display: flex;
+          p{
+            font-size: 1.5rem;
+          }//p
+          p.text{
+            width: 150px;
+          }//p.text
+        }//div#total
+
+      }//div.content1
+
+      button{
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        border: solid 1px rgb(27,181,30);
+        background-color: rgb(27,181,30);
+        color: #fff;
+        transition: 0.1s;
+        font-size: 1.5rem;
+        padding: 5px;
+        border-radius: 5px;
+
+      }//button
+      button:hover{
+        background-color: #fff;
+        color: rgb(27,181,30);
+      }//button:hover
+    }//div#body
+  }//body
+}//html
+
+section{
+  // width:900px;
+  margin:0 auto;
+  position:relative;
+  overflow:hidden;
+  height: 120px;
+  #cm{ 
+    position:absolute;
+    margin:0 auto;
+    display: flex;
+    div{
+      img{
+          width: 1500px;
+        }
+    }
+  }
+}

@@ -1,0 +1,254 @@
+@charset "UTF-8";
+body {
+  box-sizing: border-box;
+}
+
+body * {
+  box-sizing: inherit;
+  /*bodyに書いておくだけだと全体適用にならないので、body*で子要素に引き継ぎ */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  font-weight: normal;
+  text-decoration: none;
+  color: black;
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+html {
+  font-size: 15px;
+  min-width: 1000px;
+}
+
+html body .all header {
+  display: flex;
+  padding: 0px 36px;
+  border-bottom: 0px;
+  border-bottom: 1px solid #4f4f4f;
+  /* 区切り線 */
+}
+
+html body .all header .header_title {
+  /*タイトル（アルペルト）*/
+  display: inline-flex;
+  align-items: center;
+}
+
+html body .all header #search {
+  /*検索*/
+  display: flex;
+}
+
+html body .all header #search .search-form {
+  /*フォーム全体*/
+  margin: 30px;
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  width: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFF;
+  font-size: 15px;
+}
+
+html body .all header #search .search-form .search-input {
+  /*入力フォーム*/
+  border: none;
+  background: none;
+  outline: none;
+  margin-right: 80px;
+  width: 430px;
+  color: #333;
+}
+
+html body .all header #search .search-form .search-button {
+  /*検索ボタン*/
+  border: none;
+  background: none;
+  outline: none;
+  color: #999;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  transition: color 0.3s ease 0s;
+}
+
+html body .all header #search .search-form .search-button:hover {
+  color: #333;
+}
+
+html body .all header #news {
+  /*通知*/
+  display: inline-flex;
+  align-items: center;
+  margin: auto 2% auto auto;
+}
+
+html body .all header #news span {
+  /*通知数*/
+  position: absolute;
+  /* 相対位置に指定 */
+  top: -10px;
+  /* 表示位置を上から-10pxの位置にする */
+  left: calc(100% - 10px);
+  /* 表示位置を右から内側に10pxの位置 */
+  color: #FFF;
+  /* 文字色を白に指定 */
+  font-weight: bold;
+  /* 太文字にする */
+  line-height: 20px;
+  /* 行の高さを指定 */
+  text-align: center;
+  /* 文字を中央揃えにする */
+  background: #E68031;
+  /* 背景色をオレンジに指定 */
+  border-radius: 10px;
+  /* line-heightの半分の角丸を指定 */
+  min-width: 20px;
+  /* 最低幅を指定 */
+  padding: 0 3px;
+  /* 左右に少しだけ余白を設定 */
+  box-sizing: border-box;
+  /* 計算しやすいように */
+}
+
+html body .all header #login_button {
+  /*ログイン・新規登録*/
+  display: inline-flex;
+  align-items: center;
+  margin: 30px 10px;
+  padding: 2px 5px;
+}
+
+html body .all header #login_button a {
+  color: black;
+  background-color: white;
+  border: 1px solid #808080;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+html body .all header #login_button a:hover {
+  color: #808080;
+  background-color: white;
+  border: 1px solid #808080;
+}
+
+html body .all #main #root {
+  margin: 10px;
+}
+
+html body .all #main #root ul {
+  display: flex;
+}
+
+html body .all #main #root ul li#connect {
+  margin: 0 5px;
+}
+
+html body .all #main #title {
+  font-size: 2rem;
+  width: 160px;
+  text-align: center;
+  margin: 50px auto;
+  margin-top: 80px;
+  border-bottom: solid 1px #808080;
+}
+
+html body .all #main #table {
+  border: solid 1px #000;
+  border-radius: 25px;
+  width: 900px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  border-collapse: collapse;
+  border-spacing: 0cm;
+  padding-top: 20px;
+}
+
+html body .all #main #table table {
+  width: 100%;
+  border-spacing: 0cm;
+}
+
+html body .all #main #table table tr th {
+  font-size: 1.25rem;
+  padding: 10px;
+  border-bottom: solid 1px #000;
+}
+
+html body .all #main #table table tr td {
+  width: calc(100% / 6);
+  max-width: calc(100% / 6);
+  position: relative;
+  border-bottom: solid 1px #000;
+  text-align: center;
+}
+
+html body .all #main #table table tr td.img {
+  border-right: solid 1px #000;
+}
+
+html body .all #main #table table tr td.img div {
+  height: 130px;
+  position: relative;
+  overflow-wrap: normal;
+  overflow: hidden;
+}
+
+html body .all #main #table table tr td.img div img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+html body .all #main #table table tr.tableTitle {
+  border: none;
+}
+
+html body .all #main #table #pager {
+  width: 250px;
+  margin-left: calc(50% - 125px);
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+html body .all #main #table #pager ul {
+  border-bottom: solid 1px #000;
+  display: flex;
+  justify-content: center;
+}
+
+html body .all #main #table #pager ul li {
+  margin: 0 5px;
+  margin-bottom: 5px;
+}
+
+html body .all #main #table #pager ul li a:hover {
+  color: #5479f3;
+  transition: 0.25s;
+}
+
+html body .all #main #table #pager ul .now {
+  pointer-events: none;
+  text-decoration: none;
+}
+
+html body .all #main #table #pager ul #num {
+  margin: 0 20px;
+  display: flex;
+}
+/*# sourceMappingURL=exhibit_log_style.css.map */

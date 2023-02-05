@@ -1,0 +1,350 @@
+@charset "UTF-8";
+/*-------------------------
+全般的なスタイル
+-------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+body * {
+  box-sizing: inherit;
+  /*bodyに書いておくだけだと全体適用にならないので、body*で子要素に引き継ぎ */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  position: relative;
+}
+
+* a {
+  text-decoration: none;
+  color: black;
+}
+
+/*-------------------------
+  メイン
+-------------------------*/
+main #box2 {
+  display: flex;
+}
+
+main #box2 .container {
+  margin: 80px 11% 0;
+  max-width: 500px;
+}
+
+main #box2 .container .slider1 {
+  margin-bottom: 20px;
+}
+
+main #box2 .container .slider1 .slick-slide img {
+  height: 100%;
+  /* 変更 */
+  max-width: 500px;
+}
+
+main #box2 .container .slider1 .slick-track {
+  /* 追加 */
+  height: 50vh;
+}
+
+main #box2 .container .slider1 .slick-prev, main #box2 .container .slider1 .slick-next {
+  width: 20px;
+  height: 20px;
+}
+
+main #box2 .container .slider1 .slick-prev:before, main #box2 .container .slider1 .slick-next:before {
+  color: #000;
+  /*黒にする*/
+  opacity: 1;
+  /*デフォルトは.75が指定されている*/
+  font-size: 25px;
+}
+
+main #box2 .container .slider1 img {
+  box-sizing: border-box;
+  align-items: center;
+}
+
+main #box2 .container .thumbnail .slick-prev, main #box2 .container .thumbnail .slick-next {
+  width: 25px;
+  height: 25px;
+}
+
+main #box2 .container .thumbnail .slick-prev:before, main #box2 .container .thumbnail .slick-next:before {
+  color: #000;
+  /*黒にする*/
+  opacity: 1;
+  /*デフォルトは.75が指定されている*/
+  font-size: 25px;
+}
+
+main #box2 .container .thumbnail .slick-prev:before {
+  content: "\f053";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-weight: 700;
+}
+
+main #box2 .container .thumbnail .slick-next:before {
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-weight: 700;
+}
+
+main #box2 .container img {
+  height: auto;
+  width: 100%;
+  padding-left: 5px;
+  margin: 0 auto;
+}
+
+main #box2 .container .thumbnail-img {
+  opacity: .3;
+  transition: opacity .3s linear;
+}
+
+main #box2 .container .thumbnail .slick-current {
+  opacity: 1;
+}
+
+main #box2 #right_box {
+  margin-top: 80px;
+}
+
+main #box2 #right_box h1 {
+  width: 500px;
+  height: 100px;
+  word-wrap: normal;
+  /*自動改行*/
+}
+
+main #box2 #right_box .money .money_red {
+  color: red;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+main #box2 #right_box .money span {
+  color: #808080;
+  font-size: 10px;
+  padding-left: 10px;
+}
+
+main #box2 #right_box .example2 {
+  display: flex;
+}
+
+main #box2 #right_box .example2 label {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+main #box2 #right_box .example2 label:before,
+main #box2 #right_box .example2 label:after {
+  position: absolute;
+  content: "";
+  left: 25px;
+  top: 0;
+  width: 25px;
+  height: 40px;
+  background: #ff5db6;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+main #box2 #right_box .example2 label:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+main #box2 #right_box .example2 input:checked + label:before,
+main #box2 #right_box .example2 input:checked + label:after {
+  background: #8a8a8a;
+  color: #FFF;
+}
+
+main #box2 #right_box .example2 input {
+  display: none;
+}
+
+main #box2 #right_box #comment {
+  margin-top: -30px;
+  margin-left: 80px;
+}
+
+main #box2 #right_box #comment img {
+  width: 100px;
+  height: 100px;
+}
+
+main #box2 #right_box .block2 {
+  /*「確認する」ボタン*/
+}
+
+main #box2 #right_box .block2 a {
+  margin: 20px 2% auto auto;
+  color: #ffffff;
+  background-color: #1bb51e;
+  border-radius: 10px;
+  padding: 15px 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #000000;
+}
+
+main #box2 #right_box .block2 a:hover {
+  background-color: white;
+  color: #1bb51e;
+  transition: .3s;
+  border: 1px solid #1bb51e;
+}
+
+main #box2 #right_box .explanation {
+  margin-top: 30px;
+}
+
+main #box2 #right_box .explanation h3 {
+  margin-bottom: 10px;
+}
+
+main #box2 #right_box .explanation p {
+  width: 500px;
+  word-wrap: normal;
+  /*自動改行*/
+}
+
+main #box2 #right_box #buyer {
+  margin-top: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.313);
+}
+
+main #box2 #right_box #buyer h3 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.313);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+main #box2 #right_box #buyer .flex {
+  display: flex;
+}
+
+main #box2 #right_box #buyer .flex #radius {
+  border-radius: 150px;
+  overflow: hidden;
+}
+
+main #box2 #right_box #buyer .flex div {
+  margin-left: 30px;
+}
+
+main #box3 {
+  margin: 80px  11%;
+}
+
+main #box3 #show_question {
+  border: 1px solid #000;
+  height: 300px;
+  overflow: scroll;
+}
+
+main #box3 #show_question p {
+  padding-bottom: 10px;
+}
+
+main #box3 #question {
+  margin-top: 20px;
+}
+
+main #box3 #question .tarea {
+  /*商品の説明入力フォーム*/
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  margin: 0em 0;
+  line-height: 1.5;
+  height: 5em;
+}
+
+main #box3 #question .button3 {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 6px 25px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 0.5pt;
+  text-decoration: none;
+  background-color: #1bb51e;
+  border: 1px solid #1bb51e;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  position: relative;
+  display: block;
+  position: absolute;
+  right: 0;
+}
+
+main #box3 #question .button3:hover {
+  color: #1bb51e;
+  background-color: #ffffff;
+}
+
+main #other_item {
+  width: 80%;
+  margin: 0 auto;
+}
+
+main #other_item #contents {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main #other_item #contents .item {
+  width: calc(20% - 30px);
+  margin: 15px;
+  position: relative;
+}
+
+main #other_item #contents .item p {
+  font-size: 1.1rem;
+}
+
+main #other_item #contents .item .price {
+  position: absolute;
+  bottom: 20%;
+  font-size: 1.2rem;
+  background-color: #000000ad;
+  color: white;
+  width: 100px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+/*# sourceMappingURL=details_style.css.map */

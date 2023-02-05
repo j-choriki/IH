@@ -1,0 +1,255 @@
+$text-color:rgb(27, 181, 30);
+/*-------------------------
+  ヘッダー
+-------------------------*/
+header {
+    display: flex;
+    padding: 0px 36px;
+    border-bottom: 0px;
+    border-bottom: 1px solid rgb(79, 79, 79); /* 区切り線 */
+    #login_name{
+      margin-top:40px;
+      margin-right: 30px;
+      span{
+        color: $text-color;
+      }
+    }
+  }
+  header .header_title { /*タイトル（アルペルト）*/
+    display: inline-flex;
+    align-items: center;
+  }
+  header #search { /*検索*/
+    display: flex;
+  }
+  header #search .search-form { /*フォーム全体*/
+    margin: 30px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    width: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    font-size: 15px;
+  }
+  header #search .search-form .search-input { /*入力フォーム*/
+    border: none;
+    background: none;
+    outline: none;
+    margin-right: 80px;
+    width: 430px;
+    color: #333;
+  }
+  header #search .search-form .search-button { /*検索ボタン*/
+    border: none;
+    background: none;
+    outline: none;
+    color: #999;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    transition: color 0.3s ease 0s;
+  }
+  header #search .search-form .search-button:hover {
+    color: #333;
+  }
+  header #news { /*通知*/
+    display: inline-flex;
+    align-items: center;
+    margin: auto 3% auto auto;
+    a{
+      i{
+        font-size:1.5rem;
+        color: #666;
+      }
+    }
+  }
+  
+  header #login_button { /*ログイン・新規登録*/
+    display: inline-flex;
+    align-items: center;
+    margin: 30px 10px;
+    padding: 2px 5px;
+  }
+  header #login_button a {
+    color: black;
+    background-color: white;
+    border: 1px solid #808080;
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
+  header #login_button a:hover {
+    color: #808080;
+    background-color: white;
+    border: 1px solid #808080;
+  }
+  
+  
+  
+  
+  /*==　ボタンのためのCSS  */
+  
+  .openbtn{
+    position: fixed;
+    top: 25px;
+    right: 10px;
+    z-index:9999;/* ボタンを最前面に */
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* ✖️に変化 */
+  .openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #666;
+    width: 45%;
+  }
+  
+  .openbtn span:nth-of-type(1){
+    top: 15px;
+  }
+  
+  .openbtn span:nth-of-type(2){
+    top: 23px;
+  }
+  
+  .openbtn span:nth-of-type(3){
+    top: 31px;
+  }
+  
+  .openbtn.active span:nth-of-type(1){
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+  
+  .openbtn.active span:nth-of-type(2){
+    opacity: 0;
+  }
+  .openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+  
+  /*== ナビゲーションのためのCSS  */
+  
+  /* ナビゲーションのためのCSS */
+  #g-nav.panelactive .g-nav-list{
+    /* ナビゲーション数が増えた場合縦スクロール */
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -weblit-overflow-scrolling:touch;
+  }
+  
+  /* ナビゲーション*/
+  #g-nav ul{
+    &:nth-of-type(1){
+      /* ナビゲーション天地中央揃え */
+      position: absolute;
+      z-index: 999;
+      top: 20%;
+      left: 10%;
+      transform: translate(-50%,-50%);
+      // 追記
+      display:flex;
+    }
+    &:nth-of-type(2){
+        /* ナビゲーション天地中央揃え */
+        position: absolute;
+        z-index: 999;
+        top: 32%;
+        left: 10%;
+        transform: translate(-50%,-50%);
+        text-align: left;
+    }
+  }
+  
+  /* 以下は検証用のレイアウトのためのCSS*/
+  nav ul{
+    list-style: none;
+    text-align: center;
+  }
+  
+  nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #0000008f;
+    padding: 10px;
+  }
+  
+  nav{
+    ul{
+        &:nth-of-type(1){
+          li{
+            border: #0000004a 1px solid;
+            border-radius:10px;
+            margin: 10px;
+            color: #0000004a;
+            &:hover{
+              background-color: $text-color;
+              transition:.3s;
+              a{
+                color: white;
+              }
+            }
+          }
+      }
+    }
+    #logout{
+      ul{
+        &:nth-of-type(2){
+          li{
+            &:hover{
+              a{
+                color: $text-color;
+                transition: .3s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+  /*== 以下追記  */
+  #g-nav{
+    /* position:fixed;にし、z-indexの数値を大きくして前面へ */
+    position: fixed;
+    z-index: 999;
+    /* ナビゲーション位置と形状 */
+    top: 0;
+    right: -120%;
+    width: 20%;
+    height: 50vh;/* ナビの高さ*/
+    background: rgba(255,255,255,0.9);
+    /* 動き */
+    transition: all 0.6s;
+  }
+  
+  /* アクティブクラスがついたら位置を０に */
+  #g-nav.panelactive{
+    right: 0;
+  }
+  
+
+  header{
+    nav{
+      #logout{
+        display: none;
+      }
+    }
+  }

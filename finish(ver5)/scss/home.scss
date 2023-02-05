@@ -1,0 +1,107 @@
+$text-color:rgb(27, 181, 30);
+/*-------------------------
+全般的なスタイル
+-------------------------*/
+body {
+  box-sizing: border-box;
+  display:none;
+}
+body * {
+  box-sizing: inherit; /*bodyに書いておくだけだと全体適用にならないので、body*で子要素に引き継ぎ */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  position: relative;
+}
+* a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+
+
+/*-------------------------
+  メイン
+-------------------------*/
+main{
+  #slider{/*広告バナー*/
+    width: 100%;
+    margin: 50px auto;
+    .slick-arrow:before{ /*矢印を消す*/
+        content:""!important;
+    }
+    .slick-slide img {
+        height: 20vw; //ポイント1
+        max-width: 500px;
+        max-height: 220px; //ポイント2
+        min-height: 220px; //ポイント2
+      }
+    .slick-slide {
+        transform: scale(.8);
+    }
+    .slick-current {
+        transform: scale(1);
+    }
+    
+    .slider img{
+            width: 100%;
+            width: 500px;
+            height: 220px;
+            object-fit: cover;
+            // padding: 0px 85px;
+            // padding-left: 20px;
+            // padding-right: 60px;
+            border-radius: 30px;
+    }
+    
+}
+  // #list_img{/*商品一覧*/
+  //   max-width: 100%;
+  //   margin: 20px 15%;
+  //       ul{
+  //       box-sizing: border-box; 
+  //       list-style: none; 
+  //       padding-left: 0;
+  //       display: flex;
+  //       flex-wrap: wrap;
+  //         li{
+  //         margin-left: 40px;
+  //         margin-top: 20px;    
+  //         }  
+  //       }
+  //   img{ /*画像*/
+  //       width: 200px;
+  //       height: 200px;
+  //   }
+  // } 
+  #contents{
+    display: flex;
+    flex-wrap: wrap;
+    .item{
+      width: calc(20% - 30px);
+      margin: 15px;
+      position: relative;
+      p{
+        font-size: 1.1rem;
+      }
+      .price{
+        position: absolute;
+        bottom: 20%;
+        font-size: 1.2rem;
+        background-color:#000000ad;
+        color: white;
+        width: 100px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+    }
+    
+
+  } 
+}
+
+
+

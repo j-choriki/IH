@@ -1,0 +1,454 @@
+@charset "UTF-8";
+/*-------------------------
+全般的なスタイル
+-------------------------*/
+body {
+  box-sizing: border-box;
+}
+
+body * {
+  box-sizing: inherit;
+  /*bodyに書いておくだけだと全体適用にならないので、body*で子要素に引き継ぎ */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+* a {
+  text-decoration: none;
+  color: black;
+}
+
+/*-------------------------
+  ヘッダー
+-------------------------*/
+header {
+  display: flex;
+  padding: 0px 36px;
+  border-bottom: 0px;
+  border-bottom: 1px solid #4f4f4f;
+  /* 区切り線 */
+}
+
+header .header_title {
+  /*タイトル（アルペルト）*/
+  display: inline-flex;
+  align-items: center;
+}
+
+header #search {
+  /*検索*/
+  display: flex;
+}
+
+header #search .search-form {
+  /*フォーム全体*/
+  margin: 30px;
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  width: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFF;
+  font-size: 15px;
+}
+
+header #search .search-form .search-input {
+  /*入力フォーム*/
+  border: none;
+  background: none;
+  outline: none;
+  margin-right: 80px;
+  width: 430px;
+  color: #333;
+}
+
+header #search .search-form .search-button {
+  /*検索ボタン*/
+  border: none;
+  background: none;
+  outline: none;
+  color: #999;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  transition: color 0.3s ease 0s;
+}
+
+header #search .search-form .search-button:hover {
+  color: #333;
+}
+
+header #news {
+  /*通知*/
+  display: inline-flex;
+  align-items: center;
+  margin: auto 2% auto auto;
+}
+
+header #news span {
+  /*通知数*/
+  position: absolute;
+  /* 相対位置に指定 */
+  top: -10px;
+  /* 表示位置を上から-10pxの位置にする */
+  left: calc(100% - 10px);
+  /* 表示位置を右から内側に10pxの位置 */
+  color: #FFF;
+  /* 文字色を白に指定 */
+  font-weight: bold;
+  /* 太文字にする */
+  line-height: 20px;
+  /* 行の高さを指定 */
+  text-align: center;
+  /* 文字を中央揃えにする */
+  background: #E68031;
+  /* 背景色をオレンジに指定 */
+  border-radius: 10px;
+  /* line-heightの半分の角丸を指定 */
+  min-width: 20px;
+  /* 最低幅を指定 */
+  padding: 0 3px;
+  /* 左右に少しだけ余白を設定 */
+  box-sizing: border-box;
+  /* 計算しやすいように */
+}
+
+header #icon {
+  /*ユーザーアイコン*/
+  align-items: center;
+  margin: auto 1% auto 1%;
+}
+
+header #icon .icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  overflow: hidden;
+  position: relative;
+}
+
+header #icon .icon-circle img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/*-------------------------
+  メイン
+-------------------------*/
+main #box1 {
+  /*枠*/
+  padding: 3em 3em;
+  margin: 5em 15%;
+  font-weight: bold;
+  background: #FFF;
+  border: solid 2px black;
+  /*線*/
+  border-radius: 15px;
+  /*角の丸み*/
+}
+
+main #box1 .title {
+  /*タイトル*/
+  text-align: center;
+  font-size: 23px;
+}
+
+main #box1 .input .exhibit {
+  /*矢印をなくす*/
+  /* Chrome, Safari, Edge */
+  /* Firefox */
+}
+
+main #box1 .input .exhibit .title3 {
+  /*タイトル*/
+  margin-top: 25px;
+}
+
+main #box1 .input .exhibit ::after {
+  /*必須*/
+  content: "必須";
+  color: #ffffff;
+  background: #cc0000;
+  font-size: 0.5em;
+  padding: 0.2em;
+  border-radius: 0.5em;
+  margin-left: 1em;
+  margin-top: 7px;
+}
+
+main #box1 .input .exhibit .txt {
+  /*入力フォーム*/
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid black;
+  margin: 0.5em 0;
+}
+
+main #box1 .input .exhibit .tarea {
+  /*商品の説明入力フォーム*/
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  margin: 0em 0;
+  line-height: 1.5;
+  height: 10em;
+}
+
+main #box1 .input .exhibit .txt2 {
+  /*販売価格フォーム*/
+  width: 50%;
+  padding: 0.5em;
+  border: 1px solid black;
+  margin: 0.5em 0;
+  margin-right: 5px;
+  width: 50%;
+  text-align: right;
+}
+
+main #box1 .input .exhibit input::-webkit-outer-spin-button,
+main #box1 .input .exhibit input::-webkit-inner-spin-button {
+  margin: 0;
+}
+
+main #box1 .input .flex {
+  display: flex;
+}
+
+main #box1 .input .flex #box {
+  /*ファイル＆ドロップ */
+  width: 120%;
+}
+
+main #box1 .input .flex #box .upload-area {
+  margin-right: 20px;
+  height: 300px;
+  position: relative;
+  border: 1px dotted black;
+}
+
+main #box1 .input .flex #box .upload-area i {
+  position: absolute;
+  font-size: 120px;
+  opacity: .1;
+  width: 100%;
+  left: 23%;
+  top: 80px;
+}
+
+main #box1 .input .flex #box .upload-area p {
+  width: 150px;
+  position: absolute;
+  top: 200px;
+  left: 20%;
+  opacity: .8;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+main #box1 .input .flex #box .input-files {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+main #box1 .input .flex #box input {
+  float: left;
+  clear: both;
+  padding: 15px;
+}
+
+main #box1 .input .flex #box #preview-item1 {
+  box-sizing: border-box;
+  list-style: none;
+  padding-left: 0;
+  max-width: 100%;
+  margin: 10px 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main #box1 .input .flex #box img {
+  max-height: 200px;
+  max-width: 300px;
+  border: 1px solid #000;
+}
+
+main #box1 .input .block2 {
+  /*「確認する」ボタン*/
+}
+
+main #box1 .input .block2 .button2 {
+  margin: 50px 2% auto auto;
+  color: #ffffff;
+  background-color: #1bb51e;
+  border-radius: 5px;
+  padding: 5px 120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================================
+ モーダルCSS 
+ ================================== */
+/* 画面全面の背景色の適用 */
+.modalArea {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 全面背景のモーダル解除のエリア */
+  /* モーダルウィンドウ */
+}
+
+.modalArea .modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.9);
+}
+
+.modalArea .modalWrapper {
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+  padding: 10px 30px;
+  background-color: #fff;
+  /* モーダル解除のアイコン */
+}
+
+.modalArea .modalWrapper .modalContents h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 30px 0;
+}
+
+.modalArea .modalWrapper .modalContents p {
+  font-size: 1rem;
+  line-height: 2.0rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modalArea .modalWrapper .modalContents form[name="userForm"] div {
+  margin-left: 20px;
+}
+
+.modalArea .modalWrapper .modalContents form[name="userForm"] p {
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.modalArea .modalWrapper .modalContents form[name="userForm"] p:nth-last-of-type(2) {
+  margin-bottom: 30px;
+}
+
+.modalArea .modalWrapper .modalContents form[name="userForm"] p input {
+  border: 1px solid #999;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.modalArea .modalWrapper .modalContents form[name="userForm"] .signUpButton {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  background-color: darkblue;
+  color: #fff;
+  text-align: center;
+}
+
+.modalArea .modalWrapper .modalContents form[name="userForm"] .alertBox {
+  border: 1px solid red;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: red;
+  border-radius: 5px;
+  padding-left: 10px;
+  background-color: pink;
+}
+
+.modalArea .modalWrapper .closeModal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+/* ==================================
+ モーダルfin 
+ ================================== */
+/* ボタン共通設定 */
+.btn06 {
+  /* 矢印の基点とするためrelativerを指定 */
+  position: relative;
+  /* ボタンの形状 */
+  text-decoration: none;
+  display: inline-block;
+  background: #1bb51e;
+  color: #fff;
+  padding: 10px 40px 10px 30px;
+  border-radius: 25px;
+  text-align: center;
+  outline: none;
+  /* アニメーションの指定 */
+  transition: ease .2s;
+}
+
+.btn06:hover {
+  background: #1bb51e;
+}
+
+/* 下記より追記 */
+.signUpButton::after {
+  content: "";
+  /* 絶対配置で矢印の位置を決める */
+  position: absolute;
+  top: 42%;
+  right: 13px;
+  /* 矢印の形状 */
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+  /* アニメションも指定 */
+  transition: all .3s;
+}
+
+/* hoverした際の移動 */
+.signUpButton:hover::after {
+  right: 7px;
+}
+/*# sourceMappingURL=info.css.map */

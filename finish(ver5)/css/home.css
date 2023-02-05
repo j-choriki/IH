@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/*-------------------------
+全般的なスタイル
+-------------------------*/
+body {
+  box-sizing: border-box;
+  display: none;
+}
+
+body * {
+  box-sizing: inherit;
+  /*bodyに書いておくだけだと全体適用にならないので、body*で子要素に引き継ぎ */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  position: relative;
+}
+
+* a {
+  text-decoration: none;
+  color: black;
+}
+
+/*-------------------------
+  メイン
+-------------------------*/
+main #slider {
+  /*広告バナー*/
+  width: 100%;
+  margin: 50px auto;
+}
+
+main #slider .slick-arrow:before {
+  /*矢印を消す*/
+  content: "" !important;
+}
+
+main #slider .slick-slide img {
+  height: 20vw;
+  max-width: 500px;
+  max-height: 220px;
+  min-height: 220px;
+}
+
+main #slider .slick-slide {
+  transform: scale(0.8);
+}
+
+main #slider .slick-current {
+  transform: scale(1);
+}
+
+main #slider .slider img {
+  width: 100%;
+  width: 500px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+main #contents {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main #contents .item {
+  width: calc(20% - 30px);
+  margin: 15px;
+  position: relative;
+}
+
+main #contents .item p {
+  font-size: 1.1rem;
+}
+
+main #contents .item .price {
+  position: absolute;
+  bottom: 20%;
+  font-size: 1.2rem;
+  background-color: #000000ad;
+  color: white;
+  width: 100px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+/*# sourceMappingURL=home.css.map */

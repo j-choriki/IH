@@ -1,0 +1,265 @@
+@charset "UTF-8";
+* {
+  font-weight: normal;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  list-style: none;
+  outline: none;
+  color: #000;
+}
+
+img {
+  vertical-align: top;
+  width: 100px;
+}
+
+html {
+  font-size: 15px;
+}
+
+html body header {
+  display: flex;
+  padding: 0px 36px;
+  border-bottom: 0px;
+  border-bottom: 1px solid #4f4f4f;
+  /* 区切り線 */
+}
+
+html body header .header_title {
+  /*タイトル（アルペルト）*/
+  display: inline-flex;
+  align-items: center;
+}
+
+html body header #search {
+  /*検索*/
+  display: flex;
+}
+
+html body header #search .search-form {
+  /*フォーム全体*/
+  margin: 30px;
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  width: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFF;
+  font-size: 15px;
+}
+
+html body header #search .search-form .search-input {
+  /*入力フォーム*/
+  border: none;
+  background: none;
+  outline: none;
+  margin-right: 80px;
+  width: 430px;
+  color: #333;
+}
+
+html body header #search .search-form .search-button {
+  /*検索ボタン*/
+  border: none;
+  background: none;
+  outline: none;
+  color: #999;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  transition: color 0.3s ease 0s;
+}
+
+html body header #search .search-form .search-button:hover {
+  color: #333;
+}
+
+html body header #news {
+  /*通知*/
+  display: inline-flex;
+  align-items: center;
+  margin: auto 2% auto auto;
+}
+
+html body header #news span {
+  /*通知数*/
+  position: absolute;
+  /* 相対位置に指定 */
+  top: -10px;
+  /* 表示位置を上から-10pxの位置にする */
+  left: calc(100% - 10px);
+  /* 表示位置を右から内側に10pxの位置 */
+  color: #FFF;
+  /* 文字色を白に指定 */
+  font-weight: bold;
+  /* 太文字にする */
+  line-height: 20px;
+  /* 行の高さを指定 */
+  text-align: center;
+  /* 文字を中央揃えにする */
+  background: #E68031;
+  /* 背景色をオレンジに指定 */
+  border-radius: 10px;
+  /* line-heightの半分の角丸を指定 */
+  min-width: 20px;
+  /* 最低幅を指定 */
+  padding: 0 3px;
+  /* 左右に少しだけ余白を設定 */
+  box-sizing: border-box;
+  /* 計算しやすいように */
+}
+
+html body header #login_button {
+  /*ログイン・新規登録*/
+  display: inline-flex;
+  align-items: center;
+  margin: 30px 10px;
+  padding: 2px 5px;
+}
+
+html body header #login_button a {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #808080;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+html body header #login_button a:hover {
+  color: #808080;
+  background-color: #fff;
+  border: 1px solid #808080;
+}
+
+html body div#body {
+  font-size: 1.5rem;
+  width: 750px;
+  margin: 0 auto;
+}
+
+html body div#body div#complete {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 40px 0;
+}
+
+html body div#body div#complete h1 {
+  padding: 0 10px;
+  border-bottom: solid 5px #1bb51e;
+  margin-bottom: 10px;
+}
+
+html body div#body div#confirm {
+  border: solid 1px #000;
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 20px 0;
+}
+
+html body div#body div.content1 div.content2 {
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+html body div#body div.content1 div.content2 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+html body div#body div.content1 div.content2 div#address_info p {
+  width: 550px;
+  border-bottom: solid 1px #1bb51e;
+  margin-bottom: 10px;
+  position: relative;
+  left: 20px;
+  display: flex;
+}
+
+html body div#body div.content1 div.content2 div#address_info p span {
+  width: 150px;
+}
+
+html body div#body div.content1 div#product {
+  display: flex;
+  border: solid 1px #000;
+}
+
+html body div#body div.content1 div#product div#img {
+  border-right: solid 1px #000;
+}
+
+html body div#body div.content1 div#product div#img p {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+html body div#body div.content1 div#product div#img p img {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+}
+
+html body div#body div.content1 div#product div#info {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+html body div#body div.content1 div#product div#info p {
+  font-size: 1.5rem;
+}
+
+html body div#body div.content1 div#product div#info p#pName {
+  font-size: 1.75rem;
+}
+
+html body div#body div.content1 div#product div#info p#price {
+  color: red;
+}
+
+html body div#body div.content1 div#product div#info p#price span {
+  font-size: 0.75rem;
+}
+
+html body div#body div.content1 div#total {
+  display: flex;
+}
+
+html body div#body div.content1 div#total p {
+  font-size: 1.5rem;
+}
+
+html body div#body div.content1 div#total p.text {
+  width: 150px;
+}
+
+html body div#body button {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border: solid 1px #1bb51e;
+  background-color: #1bb51e;
+  color: #fff;
+  transition: 0.1s;
+  font-size: 1.5rem;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+html body div#body button:hover {
+  background-color: #fff;
+  color: #1bb51e;
+}
+/*# sourceMappingURL=buying_complete_style.css.map */
