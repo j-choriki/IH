@@ -7,11 +7,11 @@
 ５人
 
 ## 使用技術
-HTML/CSS
-SASS
-PHP
-JavaScript
-JQuery
+HTML/CSS  
+SASS  
+PHP  
+JavaScript  
+JQuery  
 
 ## 担当箇所
 ### view/
